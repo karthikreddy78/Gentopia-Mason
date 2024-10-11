@@ -24,7 +24,7 @@ class PDFReader(BaseTool):
         
         #I have chosen to print the first 10 lines of a pdf file
         sentences = text.split('.')
-        summary = '. '.join(sentences[:10]) + '.'
+        summary = '. '.join(sentences) + '.'
         return summary
 
     async def _arun(self, *args: Any, **kwargs: Any) -> Any:

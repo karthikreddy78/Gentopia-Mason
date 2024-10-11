@@ -1,57 +1,43 @@
-INFO:root:Creating Config from file: ./gentpool/pool/kmusku_scholar/agent.yaml
-INFO:root:Starting to load configuration from ./gentpool/pool/kmusku_scholar/agent.yaml
-INFO:root:Successfully loaded configuration from ./gentpool/pool/kmusku_scholar/agent.yaml
+INFO:root:Creating Config from file: ./gentpool/pool/bmi_calculator/agent.yaml
+INFO:root:Starting to load configuration from ./gentpool/pool/bmi_calculator/agent.yaml
+INFO:root:Successfully loaded configuration from ./gentpool/pool/bmi_calculator/agent.yaml
 INFO:root:--------------------
 INFO:root:[green]Welcome to Gentopia!
 INFO:root:--------------------
 INFO:root:[green]User: 
-INFO:root:kmusku_scholar is thinking...
+INFO:root:bmi_calculator is thinking...
 INFO:root:Done
-INFO:root:[blue]kmusku_scholar: 
-INFO:root:{"name":"search_single_paper", "arguments":{"title":"Gentopia: A collaborative platform for tool-augmented llms","top_k":1}}
+INFO:root:[blue]bmi_calculator: 
+INFO:root:{"name":"bmi_calculator", "arguments":{"__arg1":"178,90"}}
 
-INFO:root:Calling function: search_single_paper ...
-INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=Gentopia%3A%20A%20collaborative%20platform%20for%20tool-augmented%20llms
-INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=Gentopia%3A%20A%20collaborative%20platform%20for%20tool-augmented%20llms "HTTP/1.1 200 OK"
+INFO:root:Calling function: bmi_calculator ...
 INFO:root:Done
 INFO:root:--------------------
-INFO:root:{'title': 'Gentopia: A collaborative platform for tool-augmented llms', 'author': ['B Xu', 'X Liu', 'H Shen', 'Z Han', 'Y Li', 'M Yue', 'Z Peng'], 'pub_year': '2023', 'venue': 'arXiv preprint arXiv …', 'abstract': 'Augmented Language Models (ALMs) empower large language models with the ability to use tools, transforming them into intelligent agents for real-world interactions. However, most existing frameworks for ALMs, to varying degrees, are deficient in the following critical features: flexible customization, collaborative democratization, and holistic evaluation. We present gentopia, an ALM framework enabling flexible customization of agents through simple configurations, seamlessly integrating various language models, task formats', 'url': 'https://arxiv.org/abs/2308.04030', 'citation': 16}
+INFO:root:Your BMI is 28.41. You are classified as 'Overweight'. Consider adopting a healthier diet and exercise routine. Health Implications: Overweight individuals are at an increased risk for heart disease, type 2 diabetes, and hypertension. **Lifestyle Tips for Overweight Individuals:**
+- Incorporate more physical activity into your daily routine. Aim for at least 150 minutes of moderate aerobic activity each week.
+- Focus on a balanced diet rich in fruits, vegetables, whole grains, and lean proteins.
+- Limit the intake of processed foods, sugars, and unhealthy fats.
+- Stay hydrated by drinking plenty of water throughout the day.
+- Consider keeping a food diary to track your eating habits.
+- Set realistic weight loss goals, aiming for 1-2 pounds per week.
+
 INFO:root:--------------------
-INFO:root:kmusku_scholar is thinking...
+INFO:root:bmi_calculator is thinking...
 INFO:root:Done
-INFO:root:[blue]kmusku_scholar: 
-INFO:root:The paper titled "Gentopia: A collaborative platform for tool-augmented LLMs" was authored by B Xu, X Liu, H Shen, Z Han, Y Li, M Yue, and Z Peng, and published in 2023 as an arXiv preprint. 
+INFO:root:[blue]bmi_calculator: 
+INFO:root:Your BMI is 28.41, which classifies you as 'Overweight'. Here are some health implications and lifestyle tips to consider:
 
-**Abstract Summary:**
-Gentopia is introduced as an Augmented Language Model (ALM) framework that enhances large language models (LLMs) by enabling them to utilize tools, thereby transforming them into intelligent agents capable of real-world interactions. The authors identify key deficiencies in existing ALM frameworks, including a lack of flexible customization, collaborative democratization, and holistic evaluation. Gentopia addresses these issues by allowing for flexible agent customization through simple configurations and by integrating various language models and task formats.
+### Health Implications:
+- Overweight individuals are at an increased risk for heart disease, type 2 diabetes, and hypertension.
 
-For more details, you can access the full paper [here](https://arxiv.org/abs/2308.04030).
+### Lifestyle Tips for Overweight Individuals:
+- **Increase Physical Activity**: Aim for at least 150 minutes of moderate aerobic activity each week.
+- **Balanced Diet**: Focus on a diet rich in fruits, vegetables, whole grains, and lean proteins.
+- **Limit Unhealthy Foods**: Reduce the intake of processed foods, sugars, and unhealthy fats.
+- **Stay Hydrated**: Drink plenty of water throughout the day.
+- **Track Eating Habits**: Consider keeping a food diary to monitor your eating patterns.
+- **Set Realistic Goals**: Aim for a weight loss of 1-2 pounds per week.
+
+Making these changes can help improve your overall health and well-being.
 INFO:root:Done
 INFO:root:[green]User: 
-INFO:root:kmusku_scholar is thinking...
-INFO:root:Done
-INFO:root:[blue]kmusku_scholar: 
-INFO:root:{"name":"search_cite_paper", "arguments":{"title":"Gentopia: A collaborative platform for tool-augmented llms","top_k":5}}
-
-INFO:root:Calling function: search_cite_paper ...
-INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=Gentopia%3A%20A%20collaborative%20platform%20for%20tool-augmented%20llms
-INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=Gentopia%3A%20A%20collaborative%20platform%20for%20tool-augmented%20llms "HTTP/1.1 200 OK"
-INFO:scholarly:Getting https://scholar.google.com/scholar?hl=en&q=info:CW5n62LvAmAJ:scholar.google.com/&output=cite&scirp=0&hl=en
-INFO:httpx:HTTP Request: GET https://scholar.google.com/scholar?hl=en&q=info:CW5n62LvAmAJ:scholar.google.com%2F&output=cite&scirp=0&hl=en "HTTP/1.1 200 OK"
-INFO:scholarly:Getting https://scholar.googleusercontent.com/scholar.bib?q=info:CW5n62LvAmAJ:scholar.google.com/&output=citation&scisdr=ClExx1BOELbqw7Ex488:AFWwaeYAAAAAZwk3-882avRMAbfSWsFrYhAjP4M&scisig=AFWwaeYAAAAAZwk3-3qqq1YitbA8CE3PjiQBarM&scisf=4&ct=citation&cd=-1&hl=en
-INFO:httpx:HTTP Request: GET https://scholar.googleusercontent.com/scholar.bib?q=info:CW5n62LvAmAJ:scholar.google.com%2F&output=citation&scisdr=ClExx1BOELbqw7Ex488:AFWwaeYAAAAAZwk3-882avRMAbfSWsFrYhAjP4M&scisig=AFWwaeYAAAAAZwk3-3qqq1YitbA8CE3PjiQBarM&scisf=4&ct=citation&cd=-1&hl=en "HTTP/1.1 403 Forbidden"
-INFO:scholarly:Got an access denied error (403).
-INFO:scholarly:No other connections possible.
-INFO:scholarly:Retrying immediately with another session.
-INFO:scholarly:Exception RuntimeError while fetching page: ('Cannot send a request, as the client has been closed.',)
-INFO:scholarly:Retrying with a new session.
-INFO:httpx:HTTP Request: GET https://scholar.googleusercontent.com/scholar.bib?q=info:CW5n62LvAmAJ:scholar.google.com%2F&output=citation&scisdr=ClExx1BOELbqw7Ex488:AFWwaeYAAAAAZwk3-882avRMAbfSWsFrYhAjP4M&scisig=AFWwaeYAAAAAZwk3-3qqq1YitbA8CE3PjiQBarM&scisf=4&ct=citation&cd=-1&hl=en "HTTP/1.1 403 Forbidden"
-INFO:scholarly:Got an access denied error (403).
-INFO:scholarly:No other connections possible.
-INFO:scholarly:Will retry after 78.65 seconds (with another session).
-INFO:scholarly:Exception RuntimeError while fetching page: ('Cannot send a request, as the client has been closed.',)
-INFO:scholarly:Retrying with a new session.
-INFO:httpx:HTTP Request: GET https://scholar.googleusercontent.com/scholar.bib?q=info:CW5n62LvAmAJ:scholar.google.com%2F&output=citation&scisdr=ClExx1BOELbqw7Ex488:AFWwaeYAAAAAZwk3-882avRMAbfSWsFrYhAjP4M&scisig=AFWwaeYAAAAAZwk3-3qqq1YitbA8CE3PjiQBarM&scisf=4&ct=citation&cd=-1&hl=en "HTTP/1.1 403 Forbidden"
-INFO:scholarly:Got an access denied error (403).
-INFO:scholarly:No other connections possible.
-INFO:scholarly:Will retry after 70.77 seconds (with another session).

@@ -16,3 +16,5 @@ from .kmusku_pdf_reader import *
 from .kmusku_pdf import *
 from .text_analyzer import *
 from .kmusku_text_analyzer import *
+from .bmi_calculator import *
+from .calculator import *

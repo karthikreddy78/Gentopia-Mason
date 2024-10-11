@@ -1,4 +1,5 @@
 from .text_analyzer import TextFileAnalyzer
+from .bmi import BMICalculator
 from .pdf import PDFReader
 from .basetool import BaseTool
 from .google_search import GoogleSearch
@@ -15,6 +16,7 @@ from .gradio import *
 from .code_interpreter import PythonCodeInterpreter
 from .file_operation import WriteFile, ReadFile
 from .duckduckgo import DuckDuckGo
+
 
 
 def load_tools(name: str) -> BaseTool:
@@ -47,6 +49,7 @@ def load_tools(name: str) -> BaseTool:
         "search_cite_paper": SearchCitePaper,
         "pdf_reader": PDFReader,
         "text_file_analyzer": TextFileAnalyzer,
+        "bmi_calculator": BMICalculator
     }
     if name not in name2tool:
         raise NotImplementedError
