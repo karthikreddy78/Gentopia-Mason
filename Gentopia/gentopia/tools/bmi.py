@@ -1,6 +1,7 @@
 
 from typing import AnyStr
 from gentopia.tools.basetool import *
+from .google_search import GoogleSearch
 
 class BMICalculatorArgs(BaseModel):
     height: float = Field(..., description="Height in meters")
@@ -21,50 +22,67 @@ class BMICalculator(BaseTool):
         height_str, weight_str = args.split(',')
         height = float(height_str)/100
         weight = float(weight_str)
-
+        
+        # Calculate BMI
         bmi = self._calculate_bmi(height, weight)
         
-        category, advice, health_implications = self._get_bmi_info(bmi)
-        lifestyle_tips = self._get_lifestyle_tips(category)
+        # Get BMI category, advice, and health implications
+        category = self._get_bmi_info(bmi)
+        #lifestyle_tips = self._get_lifestyle_tips(category)
+        
+        # If overweight or obese, search for health and exercise options
+        health_exercise_advice = ""
+        if category in ["Overweight", "Obese"]:
+            exercise_results = self._get_health_exercise_options(category)
+            health_exercise_advice = f"\n\nHere are some health and exercise options:\n{exercise_results}"
+                    
+        health_implication_results = self._get_health_implications(category)
+        health_implications = f"\n\nHere are some health and exercise options:\n{health_implication_results}"
+
+        lifestyle_tips_results = self.get_lifestyle_tips(category)
+        lifestyle_tips = f"\n\nHere are some health and exercise options:\n{lifestyle_tips_results}"
+
+        
+
+
+
+
+
+
         
         return (f"Your BMI is {bmi:.2f}. You are classified as '{category}'. "
-                f"{advice} {health_implications} {lifestyle_tips}")
+                f" {health_implications} {lifestyle_tips}{health_exercise_advice}")
 
     def _calculate_bmi(self, height: float, weight: float) -> float:
         return weight / (height ** 2)
 
     def _get_bmi_info(self, bmi: float) -> tuple:
         if bmi < 18.5:
-            return ("Underweight", "Consider gaining weight to reach a healthier BMI.", 
-                    "Health Implications: Being underweight can lead to nutritional deficiencies, weakened immune system, and potential fertility issues.")
+            return ("Underweight")
         elif 18.5 <= bmi < 24.9:
-            return ("Normal weight", "Great job! Maintain your current lifestyle.", 
-                    "Health Implications: Generally, a normal weight reduces the risk of chronic diseases and promotes overall well-being.")
+            return ("Normal weight")
         elif 25 <= bmi < 29.9:
-            return ("Overweight", "Consider adopting a healthier diet and exercise routine.", 
-                    "Health Implications: Overweight individuals are at an increased risk for heart disease, type 2 diabetes, and hypertension.")
+            return ("Overweight")
         else:
-            return ("Obese", "It's advisable to consult a healthcare provider for personalized advice.", 
-                    "Health Implications: Obesity can lead to serious health issues, including cardiovascular disease, certain cancers, and joint problems.")
+            return ("Obese")
 
-    def _get_lifestyle_tips(self, category: str) -> str:
-        if category == "Overweight":
-            return ("**Lifestyle Tips for Overweight Individuals:**\n"
-                    "- Incorporate more physical activity into your daily routine. Aim for at least 150 minutes of moderate aerobic activity each week.\n"
-                    "- Focus on a balanced diet rich in fruits, vegetables, whole grains, and lean proteins.\n"
-                    "- Limit the intake of processed foods, sugars, and unhealthy fats.\n"
-                    "- Stay hydrated by drinking plenty of water throughout the day.\n"
-                    "- Consider keeping a food diary to track your eating habits.\n"
-                    "- Set realistic weight loss goals, aiming for 1-2 pounds per week.\n")
-        elif category == "Obese":
-            return ("**Lifestyle Tips for Obese Individuals:**\n"
-                    "- Consult a healthcare provider or nutritionist for personalized advice and support.\n"
-                    "- Incorporate regular exercise into your routine, starting slowly and gradually increasing intensity.\n"
-                    "- Focus on portion control and mindful eating practices.\n"
-                    "- Engage in activities that you enjoy to make exercise more enjoyable.\n"
-                    "- Consider joining a support group for motivation and accountability.\n")
-        else:
-            return ""
+    
+    
+    def get_lifestyle_tips(self, category: str) -> str:
+        search_query = f"life style tips for {category.lower()}"
+        google_search_tool = GoogleSearch()
+        return google_search_tool._run(search_query)
+
+    def _get_health_exercise_options(self, category: str) -> str:
+        search_query = f"exercise options for {category.lower()}"
+        google_search_tool = GoogleSearch()
+        return google_search_tool._run(search_query)
+    
+    def _get_health_implications(self, category: str) -> str:
+        search_query = f"Health implications for {category.lower()}"
+        google_search_tool = GoogleSearch()
+        return google_search_tool._run(search_query)
+    
 
     async def _arun(self, *args: Any, **kwargs: Any) -> Any:
         raise NotImplementedError
