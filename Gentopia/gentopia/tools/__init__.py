@@ -1,3 +1,4 @@
+from .pdf import PDFReader
 from .basetool import BaseTool
 from .google_search import GoogleSearch
 from .google_scholar import *
@@ -43,6 +44,7 @@ def load_tools(name: str) -> BaseTool:
         "search_single_paper": SearchSinglePaper,
         "search_related_paper": SearchRelatedPaper,
         "search_cite_paper": SearchCitePaper,
+        "pdf_reader": PDFReader,
     }
     if name not in name2tool:
         raise NotImplementedError
