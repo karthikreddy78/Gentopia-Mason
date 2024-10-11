@@ -11,3 +11,4 @@ from .vanilla-ziyu import *
 from .scholar-ziyu import *
 from .kmusku_vanilla_llm import *
 from .kmusku_scholar import *
+from .kmusku_gsearch import *

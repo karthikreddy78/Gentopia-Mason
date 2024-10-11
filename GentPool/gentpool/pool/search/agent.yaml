@@ -1,0 +1,17 @@
+name: search
+type: openai
+version: 0.0.1
+description: Ask me anything.
+target_tasks: 
+  - find related searches
+prompt_template: !prompt VanillaPrompt
+llm: 
+  model_name: gpt-4
+  # model_name: gpt-4
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 0.0
+    max_tokens: 4096
+plugins:
+  - name: "google_search"
