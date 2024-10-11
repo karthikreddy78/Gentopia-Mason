@@ -1,87 +1,34 @@
-INFO:root:Creating Config from file: ./gentpool/pool/kmusku_pdf/agent.yaml
-INFO:root:Starting to load configuration from ./gentpool/pool/kmusku_pdf/agent.yaml
-INFO:root:Successfully loaded configuration from ./gentpool/pool/kmusku_pdf/agent.yaml
+INFO:root:Creating Config from file: ./gentpool/pool/kmusku_text_analyzer/agent.yaml
+INFO:root:Starting to load configuration from ./gentpool/pool/kmusku_text_analyzer/agent.yaml
+INFO:root:Successfully loaded configuration from ./gentpool/pool/kmusku_text_analyzer/agent.yaml
 INFO:root:--------------------
 INFO:root:[green]Welcome to Gentopia!
 INFO:root:--------------------
 INFO:root:[green]User: 
-INFO:root:kmusku_pdf is thinking...
+INFO:root:kmusku_text_analyzer is thinking...
 INFO:root:Done
-INFO:root:[blue]kmusku_pdf: 
-INFO:root:{"name":"pdf_reader", "arguments":{"file_path":"/Users/keerthireddy/Downloads/HW3_CS483__4_.pdf"}}
+INFO:root:[blue]kmusku_text_analyzer: 
+INFO:root:{"name":"text_file_analyzer", "arguments":{
+  "file_path": "/Users/keerthireddy/Downloads/output2.txt"
+}}
 
-INFO:root:Calling function: pdf_reader ...
+INFO:root:Calling function: text_file_analyzer ...
 INFO:root:Done
 INFO:root:--------------------
-INFO:root:CS 483 Due: September 25
-Homework 3
-Students are welcome to work together, but every student must write up their own solutions, inde-
-pendently! I strongly encourage students to use LaTex for writing up their solutions.  Feel free to
-copy this overleaf project as a template. 
-Question 1: Complete a divide and conquer problem at leetcode.  Choose between problem 108
-(Convert Sorted Array to Binary Search Tree), and problem 395 (Longest Substring with at Least
-K Repeating Characters).  There are many other problems on that list: if you prefer to do a differ-
-ent problem instead, please ask for approval first.
+INFO:root:Analysis of output2.txt:
+Lines: 88
+Words: 800
+Characters: 4759
+
 INFO:root:--------------------
-INFO:root:kmusku_pdf is thinking...
+INFO:root:kmusku_text_analyzer is thinking...
 INFO:root:Done
-INFO:root:[blue]kmusku_pdf: 
-INFO:root:The PDF contains the following information:
-
----
-
-**CS 483 Homework 3**  
-**Due: September 25**
-
-Students are welcome to work together, but every student must write up their own solutions independently! The instructor strongly encourages students to use LaTeX for writing up their solutions. A template is available on Overleaf.
-
-**Question 1:**  
-Complete a divide and conquer problem at LeetCode. Choose between problem 108 (Convert Sorted Array to Binary Search Tree) and problem 395 (Longest Substring with at Least K Repeating Characters). There are many other problems on that list; if you prefer to do a different problem instead, please ask for approval first.
-
---- 
-
-If you need more specific information or additional questions from the PDF, please let me know!
+INFO:root:[blue]kmusku_text_analyzer: 
+INFO:root:The text file at '/Users/keerthireddy/Downloads/output2.txt' contains:
+- 88 lines
+- 800 words
+- 4759 characters
 INFO:root:Done
 INFO:root:[green]User: 
-INFO:root:kmusku_pdf is thinking...
-INFO:root:Done
-INFO:root:[blue]kmusku_pdf: 
-INFO:root:{"name":"pdf_reader", "arguments":{"file_path":"/Users/keerthireddy/Downloads/HW3_CS483__4_.pdf"}}
-
-INFO:root:Calling function: pdf_reader ...
-INFO:root:Done
-INFO:root:--------------------
-INFO:root:CS 483 Due: September 25
-Homework 3
-Students are welcome to work together, but every student must write up their own solutions, inde-
-pendently! I strongly encourage students to use LaTex for writing up their solutions.  Feel free to
-copy this overleaf project as a template. 
-Question 1: Complete a divide and conquer problem at leetcode.  Choose between problem 108
-(Convert Sorted Array to Binary Search Tree), and problem 395 (Longest Substring with at Least
-K Repeating Characters).  There are many other problems on that list: if you prefer to do a differ-
-ent problem instead, please ask for approval first.
-INFO:root:--------------------
-INFO:root:kmusku_pdf is thinking...
-INFO:root:Done
-INFO:root:[blue]kmusku_pdf: 
-INFO:root:I have accessed the PDF file. Here is a summary of its content:
-
----
-
-**CS 483 Homework 3**
-- **Due Date:** September 25
-- **Collaboration Policy:** Students are welcome to work together, but each student must write up their own solutions independently. 
-- **Formatting Recommendation:** Students are encouraged to use LaTeX for writing their solutions. A template is available on Overleaf.
-
-**Question 1:** 
-- Complete a divide and conquer problem on LeetCode. 
-- Choose between:
-  - Problem 108: Convert Sorted Array to Binary Search Tree
-  - Problem 395: Longest Substring with at Least K Repeating Characters
-- If you prefer a different problem, please seek approval first.
-
----
-
-If you need more specific information or details from the document, let me know!
-INFO:root:Done
-INFO:root:[green]User: 
+INFO:root:
+[red]Bye!
